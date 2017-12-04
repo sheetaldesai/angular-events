@@ -1,13 +1,13 @@
 export class User {
     constructor (
-        firstName : string = "",
-        lastName : string = "",
-        password : string = "",
-        confirm_password : string = "",
-        street_address : string = "",
-        unit : number = undefined,
-        city : string = "",
-        state : string = "",
-        lucky : boolean = true
+        public firstname : string = "",
+        public lastname : string = "",
+        public password : string = "",
+        public confirm_password : string = "",
+        public street_address : string = "",
+        public unit : number = undefined,
+        public city : string = "",
+        public state : string = "",
+        public lucky : boolean = true
     ){}
 }
