@@ -1,0 +1,9 @@
+<h1>{{switch_title}}</h1>
+<div>
+  <table>
+    <tr>
+        <td *ngFor="let number of switches; let idx = index"><button [ngClass]="{'box':true, 'off':!number}" (click)="flipswitch(idx)">{{number | onOff}}</button>
+        </td>
+    </tr>
+  </table>
+</div>

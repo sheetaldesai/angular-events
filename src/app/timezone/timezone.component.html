@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+<div>
+    <table class="table">
+      <tr>
+          <td *ngFor="let zone of timeZones">
+            <button [ngClass]="{'selected':selectedZone === zone}" (click)="changeZone(zone)">{{zone}}</button>
+          </td>
+      </tr>
+    </table>
+    <h2>{{time | date:'medium'}}</h2>
+  </div>

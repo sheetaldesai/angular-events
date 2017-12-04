@@ -1,0 +1,99 @@
+<h1>{{registration_title}}</h1>
+<form>
+    <div class="form-group">
+      <label for="firstname">*First Name</label>
+      <input 
+        type="text" 
+        name="firstname"
+        [(ngModel)]="user.firstname"
+        #firstname="ngModel"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="lastname">*Last Name</label>
+      <input 
+        type="text" 
+        name="lastname"
+        [(ngModel)]="user.lastname"
+        #lastname="ngModel"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">*Password</label>
+      <input 
+        type="password" 
+        name="password"
+        [(ngModel)]="user.password"
+        #password="ngModel"
+        required
+      />
+    </div>
+    <div class="form-group">  
+      <label for="confirm_password">*Confirm Password</label>
+      <input 
+        type="password" 
+        name="password"
+        [(ngModel)]="user.confirm_password"
+        #confirm_password="ngModel"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="street_address">Street Address</label>
+      <input 
+        type="text" 
+        name="street_address"
+        [(ngModel)]="user.street_address"
+        #street_address="ngModel"
+        required
+      />
+    </div>  
+    <div class="form-group">
+      <label for="unit">Unit/Apt#</label>
+      <input 
+        type="text" 
+        name="unit"
+        [(ngModel)]="user.unit"
+        #unit="ngModel"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input 
+        type="text" 
+        name="unit"
+        [(ngModel)]="user.city"
+        #city="ngModel"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="state">State</label>
+      <select name="state" [(ngModel)] = "user.state" #state="ngModel" required>
+        <option>CA</option>
+        <option>NC</option>
+        <option>NY</option>
+        <option>WA</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="lucky">Are you feeling lucky?</label>
+      <input 
+        type="radio" 
+        name="lucky" 
+        value="yes"
+      />Yes
+        <input 
+        type="radio" 
+        name="lucky" 
+        value="no"
+      />No
+    </div>
+    <div class="form-group">
+        <button (click) = "onSubmit()">Submit</button>
+    </div>
+  </form>
+  

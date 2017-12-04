@@ -1,0 +1,24 @@
+<h1 class="title">
+  {{title}}
+</h1>
+<div>
+  <table class="table table-striped">
+    <tr>
+      <th>Email</th>
+      <th>Importance</th>
+      <th>Subject</th>
+      <th>Contents</th>
+    </tr>
+      <tr *ngFor='let email of emails'>
+          <td>{{email.address}}</td>
+          <td *ngIf='email.important' class="important">High</td>
+          <td *ngIf='!email.important' ngclass=[]>Low</td>
+          <td>{{email.subject}}</td>
+          <td>{{email.content}}</td>
+      </tr>
+  </table>
+</div>
+<app-my-component></app-my-component><br>
+<app-timezone></app-timezone><br>
+<app-switchboard></app-switchboard>
+<app-registration></app-registration>
